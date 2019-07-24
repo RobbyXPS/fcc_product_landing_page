@@ -1,0 +1,274 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+/* general */
+#main-container {
+  height: 100%;
+  flex-direction: column;
+  display: flex
+}
+
+body {
+  margin: 0;
+  background-color: #EFE7DA;
+  font-family: 'Lato', sans-serif
+}
+
+.btn {
+  color: #002626;
+  background-color: #E55812;
+  font-weight: 600;
+  font-size: 20px;
+  padding: .5% 3%;
+  border-radius: 5px;
+  text-transform: uppercase
+}
+  .btn:hover {
+    background-color: #ef793e;
+    transition-duration: .5s
+}
+
+a.anchor {
+  display: block; 
+  position: relative; 
+  top: -75px; 
+  visibility: hidden
+}
+
+h1, h2 {
+  color: #002626;
+  flex-grow: 8
+}
+
+/* header */
+#header-img {
+  width: 52px;
+  height: 24px;
+  padding: 1% 2% 1% 5%
+}
+
+#header { 
+  display: flex;    
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #EFE7DA
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row; 
+  width: 35vw;
+  justify-content: space-around
+}
+
+.nav-link {
+  color: #002626;
+  text-decoration: none;
+  font-weight: 500
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  font-weight: 900
+}
+
+/* company highlights */
+.highlight-header {
+  padding: 1% 0% 0% 0%;
+  margin: 0% 0% 0% 0%
+}
+
+#highlight-images { 
+  width: 48px;
+  height: 48px;
+  padding: 0% 0% 0% 8%
+}
+
+.company-highlight-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: auto
+}
+
+.company-highlight {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: left;
+  padding: 0% 8% 0% 2%
+}
+
+#schedule-header {
+  margin: 10px 0px -25px 0px;
+  text-decoration: underline
+}
+
+/* email */
+#mail-body {
+  margin: -20px 0px 0px 0px;
+  font-style: italic;
+  text-align: center
+}
+
+#email {
+  width: 20%;
+  margin: 2% 0% 0% 0%;
+  padding: .5% 3%;
+  text-align: center;
+  min-width: 140px 
+}
+
+#submit { margin: 2% 0% 4% 0% }
+
+.email-content { margin: 80px 0px 0px 0px }
+
+/* video */
+.video-content { padding: 3% 0% 3% 0% }
+
+.email-content, .video-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center
+}
+
+iframe {
+    max-width: 560px;
+    height: 350px;
+    width: 100%;
+  }
+
+/* Products */
+.product-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row
+}
+
+.product-item {
+  border: 2px solid #000;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 0% 1%;
+  max-width: 300px;
+  height: 400px;
+  justify-content: space-between
+}
+
+#product-content-container { padding: 0% 4% }
+
+.product-heading {
+  padding: 15px 0px;
+  background-color: #95C623;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 900
+}
+
+.product-price {
+  padding: 5%;
+  font-size: 18px;
+  font-weight: 900
+}
+
+.product-body {
+  padding: 0% 5%;
+  font-size: 18px
+}
+
+.product-img { 
+  width: 48px;
+  height: 48px;
+  padding: 10% 0% 0% 0%
+}
+
+.button-container { margin: 10px 10px 20px 10px }
+
+#product-button { padding: 5px 15% }
+
+/* footer */
+footer {
+  margin-top: 30px;
+  background-color: #fcf4e9;
+  padding: 2%
+}
+  
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none
+}
+    
+li { padding: 0 10px }
+  
+#footer-info {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #002626
+}
+
+/* media queries */
+
+@media screen and (max-width: 650px) {
+  .company-highlight { padding: 0% 8% 0% 8% }
+    
+  .company-highlight-container { justify-content: center }
+    
+  #header { padding: 3% 0% 0% 0% }
+  
+  #nav-bar { padding: 0% 0% 2% 0% }
+    
+  #header,#nav-bar {
+    flex-flow: column;
+    align-items: center;
+    text-align: center
+  }
+  
+  .email-content { margin: 210px 0px 0px 0px }
+    
+  iframe {
+    width: auto;
+    hight: auto
+  }
+    
+  a.anchor {
+    display: block; 
+    position: relative; 
+    top: -220px; 
+    visibility: hidden
+  }
+  
+  #submit { font-size: 15px }
+    
+  .product-content { flex-flow: column }
+  
+  #highlight-images { display: none }
+  
+  .company-highlight { align-items: center }
+    
+  .product-item {
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px
+  }
+    
+  #email { margin: 8% 0% 0% 0% }
+    
+  #header-img {
+    width: 104px;
+    height: 48px;
+    margin: 10px 0px -10px 0px
+  }
+}
